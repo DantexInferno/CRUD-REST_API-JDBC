@@ -32,8 +32,12 @@ public class ClienteEquipos {
 		WebResource webResource=client.resource(urlServicio);
 		
 		ClientResponse respuesta=webResource.type("application/json").post(ClientResponse.class,miEquipoVo);
+		miEquipoVo=respuesta.getEntity(EquipoVo.class);
 		System.out.println("resp: "+respuesta);
-		
+		System.out.println("Respuesta: [Equipo: "+miEquipoVo.getNombre()+"]");	
+		System.out.println("Respuesta: [Departamento: "+miEquipoVo.getDepartamento()+"]");		
+		System.out.println("Respuesta: [Estadio: "+miEquipoVo.getEstadio()+"]");		
+
 	
 	}
 

@@ -11,7 +11,7 @@ import com.rest.cruds.vo.EquipoVo;
 
 public class EquipoDAO {
 
-	public String registrarEquipo(EquipoVo miEquipoVo) {
+	public EquipoVo registrarEquipo(EquipoVo miEquipoVo) {
 		String resultado = "";
 
 		Connection connection = null;
@@ -41,7 +41,7 @@ public class EquipoDAO {
 			conexion.desconectar();
 		}
 
-		return resultado;
+		return miEquipoVo;
 	}
 	
 	public ArrayList<EquipoVo> obtenerListaEquipos() {

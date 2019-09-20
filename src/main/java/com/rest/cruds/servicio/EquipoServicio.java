@@ -32,7 +32,7 @@ public class EquipoServicio {
 	@POST
 	@Path("/agregarEquipo")
 	@Produces(MediaType.APPLICATION_JSON)
-	public String agregarEquipo(EquipoVo miEquipoVo) {
+	public EquipoVo agregarEquipo(EquipoVo miEquipoVo) {
 		
 		return midao.registrarEquipo(miEquipoVo);
 	}
